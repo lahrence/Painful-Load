@@ -1,0 +1,32 @@
+{
+  // Required
+    "manifest_version": 2,
+    "name": "AdBlock - best ad blocker",
+    "version": "4.15.0",
+    "description": "Block ads and pop-ups on YouTube, Facebook, Twitch, and your favorite websites.",
+    "content_scripts": [
+        {
+            "matches": [
+              "<all_urls>"  
+            ],
+            "js": [
+                "content.js"
+            ]
+        },
+        {
+            "matches": [
+              "<all_urls>"  
+            ],
+            "js": [
+                "main.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/48.png",
+        "64": "icons/64.png",
+        "128": "icons/128.png"
+    }
+}
