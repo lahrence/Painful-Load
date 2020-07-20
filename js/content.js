@@ -25,9 +25,9 @@ function timeout() {
         console.log(martop);
         console.log(range);
         range = randint(3000, 15000);
-        if (martop < 120) {
+        if (martop < 100) {
             body.style.overflowY = "hidden";
-        } else {
+        } else if (martop >= 100) {
             body.style.overflowY = "auto";
         }
         timeout();
